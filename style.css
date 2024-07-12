@@ -1,0 +1,177 @@
+/*
+OMG Are you a developer, or just a curious person? Well, I have a little surprise for you.
+Press control + shift + L shortcut to reveal the hidden message ;)
+*/
+body {
+    font-family: 'lucida handwriting', lucida, serif;
+    color: #eff4ef;
+    background-color: #000;
+    margin: 0;
+    overflow-y: auto; /* Enable vertical scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 100px; /* adjust as needed */
+}
+
+header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+a {color:#c3c00c}
+
+header h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px #dc1926;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #e5ece5;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+section {
+    margin: 50px 0;
+    width: 65%;
+    text-align: center;
+}
+
+.project {
+    background: rgba(126, 125, 184, 0.8);
+    padding: 20px;
+    border: 1px solid #c3c00c;
+    margin: 20px 0;
+    text-align: left;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+}
+
+.glitch-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('BG.jpeg') center center / cover no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+    
+@keyframes glitch {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(5px, -5px); }
+    60% { transform: translate(-5px, -5px); }
+    80% { transform: translate(5px, 5px); }
+    100% { transform: translate(0, 0); }
+}
+
+#easter-egg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(38, 38, 38, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: hidden;  /* Ensure the hidden class is applied */
+}
+
+#easter-egg img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.glitch {
+    color: #ccc;
+    text-decoration: none;
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    word-spacing: -0.375em;
+    display: inline-block;
+    text-align: left;
+    animation: cursor 3s infinite ease-in-out;
+  }
+.glitch:hover, .glitch:hover:before, .glitch:hover:after {
+font-weight: normal;
+text-decoration: underline;
+}
+.glitch:before, .glitch:after {
+content: "vasa.mohanseshasai@gmail.com";
+position: absolute;
+background: #303039;
+width: 100%;
+height: 100%;
+top: 0;
+overflow: hidden;
+clip: rect(0, 256px, 0, 0);
+}
+.glitch:before {
+left: 2px;
+text-shadow: -1px 0 red;
+animation: animation1 2s infinite linear alternate-reverse;
+}
+.glitch:after {
+left: -2px;
+text-shadow: -1px 0 green;
+animation: animation2 4s infinite linear alternate-reverse;
+}
+.email {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.email::after {
+    content: 'Dont be lazy like a dev';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ff0000;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.email:hover::after {
+    transform: translateY(0);
+}
+
+.email:hover {
+    color: transparent;
+}
